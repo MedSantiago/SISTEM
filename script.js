@@ -72,8 +72,8 @@ const drivePreview = "https://drive.google.com/file/d/1qpHRi5KCWfKoXFOZrXsiXh7ul
         id:"yt-endocrino-1",
         title:"Clase 1 - Introducción al eje hipotálamo-hipófisis",
         description:"Video de apoyo adjunto para revisar el eje hormonal. Reemplaza este enlace por el video real del curso.",
-        source:"https://youtu.be/fUyGyjbqAEw?si=5MQA0Gmm9pLK5iRj",
-        origin:"https://youtu.be/fUyGyjbqAEw?si=5MQA0Gmm9pLK5iRj",
+        source:"https://youtu.be/-q1-C3H_XyA",
+        origin:"https://youtu.be/-q1-C3H_XyA",
         platform:"YouTube"
       },
       {
