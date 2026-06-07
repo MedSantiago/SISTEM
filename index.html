@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aula Digital - Maqueta LMS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="campus-band"></div>
+
+  <header class="top-header">
+    <div class="logo">
+      <div class="seal">PUJ</div>
+      <div>Pontificia Universidad<br>Javeriana Cali</div>
+    </div>
+    <div class="course-name" id="headerCourseName">Sist. Endocrino y Metabolismo - 20261 - S</div>
+    <div class="header-icons" aria-hidden="true">
+      <span>▦</span><span>✉</span><span>▱</span><span>🔔</span>
+    </div>
+    <div class="avatar">DC</div>
+    <div class="username">Diana Crespo Luna</div>
+    <div class="header-icons" aria-hidden="true"><span>⚙</span></div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="nav-item active" data-page="home">Course Home</div>
+    <div class="nav-item" data-page="contentHome">Content</div>
+
+    <div class="nav-item">
+      Actividades ▾
+      <div class="dropdown">
+        <div data-page="assignments">Assignments</div>
+        <div>Discussions</div>
+        <div>Blog</div>
+        <div>Groups</div>
+        <div>Video Actividad</div>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      Evaluaciones ▾
+      <div class="dropdown">
+        <div data-page="quizList">Quizzes</div>
+        <div>Surveys</div>
+        <div>Self Assessments</div>
+        <div>Awards</div>
+        <div>Rubrics</div>
+        <div data-page="grades">Grades</div>
+      </div>
+    </div>
+
+    <div class="nav-item" data-page="grades">Class Progress</div>
+    <div class="nav-item" data-page="panopto">Panopto</div>
+    <div class="nav-item">Ayuda ▾</div>
+    <div class="nav-item">Classlist</div>
+    <div class="nav-item">Biblioteca</div>
+  </nav>
+
+  <section id="home" class="page active">
+    <div class="course-banner">
+      <h1>Sist. Endocrino y Metabolismo - 20261 - S</h1>
+    </div>
+
+    <main class="home-grid">
+      <section class="tile">
+        <div class="tile-title">Announcements ˅</div>
+        <h2 class="announcement-title">Revisión examen Módulo 3</h2>
+        <p class="muted">Jose Ortega Avila posted on Jun 5, 2026 1:30 PM</p>
+        <p>Apreciados estudiantes</p>
+        <p>Buenas tardes</p>
+        <p>Se encuentran disponibles las notas del examen del Módulo 3, la nota de actividades y la nota del caso clínico integrador.</p>
+        <p>La revisión individual del examen se realizará con cita previa.</p>
+      </section>
+
+      <aside>
+        <div class="tile">
+          <div class="tile-title">Updates ˅</div>
+          <div class="update-row"><span>▦ 1 Assignments with Unread Feedback</span></div>
+        </div>
+
+        <div class="tile" style="margin-top:26px">
+          <div class="tile-title">Calendar ˅</div>
+          <div class="calendar-row"><b>Saturday, June 6, 2026</b><span>▷</span></div>
+          <div class="calendar-row"><span>Upcoming events</span><span>▾</span></div>
+        </div>
+      </aside>
+    </main>
+  </section>
+
+  <section id="contentHome" class="page">
+    <div class="content-hero">
+      <div class="start-card">
+        <div class="folder-icon"></div>
+        <h1>Fisiología</h1>
+        <button class="btn primary" onclick="openModule('fisiologia')">Continue</button>
+      </div>
+    </div>
+
+    <main class="content-container" id="modulesContainer"></main>
+  </section>
+
+  <section id="lessonView" class="page">
+    <div class="viewer">
+      <aside class="viewer-sidebar">
+        <div class="viewer-sidebar-top">
+          <button type="button" onclick="showPage('contentHome')" title="Volver">‹</button>
+          <span>Back to Content</span>
+          <span style="text-align:center;color:#888">⋮</span>
+          <button type="button" onclick="showPage('contentHome')" title="Cerrar">×</button>
+        </div>
+
+        <div class="viewer-bluebox" onclick="showLessonIndex()">
+          <div>
+            <small id="sideCourse">Sist. Endocrino y Metabolismo - 20261 - S · Unit 3 of 7</small>
+            <b id="sideModuleTitle">Anatomía</b>
+          </div>
+          <div class="progress-circle" id="sideProgress">5/5</div>
+        </div>
+
+        <div class="side-files" id="sideFiles"></div>
+        <div class="end-unit">End of Unit</div>
+      </aside>
+
+      <main class="viewer-main">
+        <div class="viewer-toolbar">
+          <div></div>
+          <div class="viewer-title" id="viewerTitle">Anatomía</div>
+          <div class="viewer-actions">
+            <button type="button" onclick="previousDoc()" title="Anterior">‹</button>
+            <span style="font-size:24px;color:#777">⋮</span>
+            <button type="button" onclick="nextDoc()" title="Siguiente">›</button>
+          </div>
+        </div>
+
+        <section class="lesson-index" id="lessonIndex">
+          <h1 id="lessonMainTitle">Anatomía</h1>
+          <div class="lesson-links" id="centerLinks"></div>
+          <div id="moduleOverview"></div>
+        </section>
+
+        <section class="document-view" id="docReader">
+          <div class="doc-header">
+            <div>
+              <a onclick="showLessonIndex()">‹ Volver al índice del módulo</a>
+              <h1 id="docTitle">Documento</h1>
+            </div>
+            <button class="btn" onclick="showLessonIndex()">Cerrar vista previa</button>
+          </div>
+          <div class="doc-card" id="docContent"></div>
+        </section>
+      </main>
+    </div>
+  </section>
+
+  <section id="panopto" class="page">
+    <main class="panopto-page">
+      <div class="toolbar-row">
+        <h1 class="page-title">Panopto</h1>
+        <input id="videoSearch" class="search" type="search" placeholder="Buscar videos de clase..." oninput="renderVideos()">
+      </div>
+
+      <div class="panopto-intro">
+        Aquí no se suben archivos. Esta sección funciona como visor de videos ya adjuntos al curso:
+        YouTube, Vimeo, enlaces externos o videos directos. Cada video tiene una flecha para abrirlo
+        en la página original.
+      </div>
+
+      <section id="videoList" class="video-viewer-grid"></section>
+    </main>
+  </section>
+
+  <section id="assignments" class="page">
+    <main class="assignments-page">
+      <h1 class="page-title">Assignments</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Assignment</th>
+            <th>Completion Status</th>
+            <th>Score</th>
+            <th>Evaluation Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>ACTIVIDAD MHC</b><br><a>May 19 - May 20</a></td>
+            <td><a>1 Submission, 1 File</a></td>
+            <td>5 / 5 - 5.00</td>
+            <td>Feedback: <a>Unread</a></td>
+          </tr>
+          <tr>
+            <td><b>EQUIPO 3: SITUACION INTEGRADORA</b><br><a>Starts Jun 2</a></td>
+            <td><a>1 Submission, 1 File</a></td>
+            <td>- / -</td>
+            <td>Pendiente</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </section>
+
+  <section id="grades" class="page">
+    <main class="grades-page">
+      <h1 class="page-title">Class Progress / Grades</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Actividad</th>
+            <th>Estado</th>
+            <th>Nota</th>
+            <th>Feedback</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ACTIVIDAD MHC</td><td>Completado</td><td>5.00 / 5.00</td><td>Unread</td></tr>
+          <tr><td>Situación integradora</td><td>Enviado</td><td>- / -</td><td>Pendiente</td></tr>
+          <tr><td>Test de aprendizaje Semana 2</td><td>Completado</td><td>1 / 1</td><td>On Attempt</td></tr>
+        </tbody>
+      </table>
+    </main>
+  </section>
+
+  <section id="quizList" class="page">
+    <main class="quiz-page">
+      <h1 class="page-title">Quiz List</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Past Quizzes</th>
+            <th>Evaluation Status</th>
+            <th>Attempts</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><a>Test Syllabus y Modelo Pedagógico-2026-1</a><br>Available on Apr 28, 2026</td><td>Feedback: <a>On Attempt</a></td><td>1 / 1</td></tr>
+          <tr><td><a>Listening - Cámara digital</a><br>Available on May 11, 2026</td><td>Feedback: <a>On Attempt</a></td><td>1 / 1</td></tr>
+        </tbody>
+      </table>
+    </main>
+  </section>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
