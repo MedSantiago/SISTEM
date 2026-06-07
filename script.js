@@ -80,8 +80,8 @@ const drivePreview = "https://drive.google.com/file/d/1qpHRi5KCWfKoXFOZrXsiXh7ul
         id:"yt-endocrino-2",
         title:"Clase 2 - Glándulas endocrinas",
         description:"Video adjunto de ejemplo. Puede ser YouTube, Vimeo o un video directo en formato MP4.",
-        source:"https://www.youtube.com/embed/tgbNymZ7vqY",
-        origin:"https://www.youtube.com/watch?v=tgbNymZ7vqY",
+        source:"https://drive.google.com/file/d/188fTHiTGduRTFrTd9pWLZLAkf7EKp197/view?usp=sharing",
+        origin:"https://drive.google.com/file/d/188fTHiTGduRTFrTd9pWLZLAkf7EKp197/view?usp=sharing",
         platform:"YouTube"
       }
     ];
